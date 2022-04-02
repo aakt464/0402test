@@ -1,0 +1,143 @@
+"""
+#01
+l=["A","B","C","D"]
+l=[1,2,3]
+l=[1,"A"]
+print(l)
+
+l=list("ABCDE")
+l=list(range(2,5,3)) #要素3:上限数 負の値は降順を表す
+print(l)
+
+list(range(10))
+list(range(1,10))
+list(range(1,10,3))
+
+#error
+list_2D=[
+["A","B","C"],
+list(range(3))
+]
+print(list_2D)
+
+import glob
+import pprint #見やすくするためのライブラリ
+dir_list=glob.glob("c:/*")
+print(dir_list)
+pprint.pprint(dir_list)
+
+#02
+num_list=list(range(10))
+print(num_list[::2])
+print(len(num_list))
+
+list_2D=[
+["A","B","C"],
+list(range(3))
+]
+print(list_2D[1][2])
+
+a,b,c=["A","B","C"]
+print("a:",a)
+print("b:",b)
+print("c:",c)
+
+
+#03
+num_list=list(range(10))
+num_list[0]=100
+num_list[-1]="A"
+num_list[0:-1]="A"
+
+#(略)
+
+num_list1=list(range(5))
+num_list2=list(range(10,15))
+num_list=num_list1+num_list2
+num_list1+=num_list2
+print(num_list1)
+
+
+#04
+
+num_list=list(range(10))
+num_list.insert(10,"A")
+num_list.insert(len(num_list),"A")
+print(num_list)
+num_list.append(["A","B"])
+num_list.extend(["A","B"])
+num_list.pop(3)#指定した要素を取り除く
+num_list.remove(5) #指定した値を取り除く
+print(num_list)
+num_list=[5,4]*4
+num=5
+while num in num_list:
+	num_list.remove(num)
+print(num_list)
+"[value] in [list]"
+result=5 in [0,1,2,3,4,5]
+print(result)
+num_list=[1,5,2,2,3,4,5,2]
+count=num_list.count(100)
+print(count)
+index=num_list.index(2)#値がある要素を返す
+print(index)
+if 100 in num_list:
+	index=num_list.index(100)
+	print(index)
+random_list=[1,5,8,4,6,2,9,0]
+random_list.sort(reverse=True)
+random_list.reverse()
+print(random_list)
+path="w:\\Sublimetext\\sec04"
+
+split_path=path.split("\\")#書き換える箇所
+split_path.insert(2,"edit_list")#挿入
+new_path="/".join(split_path)#書き換える文字
+print(new_path)
+
+
+#05
+num_list1=list(range(1,6))
+num_list1=[list(range(1,6))]
+num_list2=num_list1[:]
+num_list2[0][0]=100
+
+print(num_list1)
+print(num_list2)
+
+#06
+#映像方講義
+
+#========================
+#07
+import copy
+num_list1=list(range(1,6))
+num_list2=num_list1[:]
+num_list2=copy.deepcopy(num_list1)
+#num_list2[0][0]=100 TypeError: 'int' object does not support item assignment
+print("list1:",num_list1,type(num_list1),id(num_list1))
+print("list2:",num_list2,type(num_list2),id(num_list2))
+print("list1[0]:",num_list1[0],type(num_list1[0]),id(num_list1[0]))
+print("list2[0]:",num_list2[0],type(num_list2[0]),id(num_list2[0]))
+[[[[1,2,3],4,5,[6,7]],8,9],10]
+#[1,2,3]=>[:]
+
+"""
+
+#07
+tuple
+t=(1,2,3)
+t=1,2,3
+#NG : t=tuple("A","B","C")
+t=tuple("ABC")
+t=tuple([1,2,3])
+t=(1,)
+l=[]
+print(t,type(t))
+tuple_2D=(
+(1,2,3),
+[4,5,6])
+print(tuple_2D[0][0])
+print(tuple_2D[1][1])
+

@@ -1,0 +1,58 @@
+"""
+#01
+num=1.5
+print(num)
+word="Hello"
+print(word)
+
+#02
+numA = 2
+numB = numA+5
+numB = numA - numB
+
+print(numA)
+print(numB)
+
+
+#03
+NUM=1
+num=2
+Num=3
+print(NUM)
+print(num)
+print(Num)
+
+#num1=1
+#average_score=1.5
+
+import keyword
+print(keyword.kwlist)
+_print=10
+print("Hello")
+
+
+#04
+result = 11//2 #5
+print(result)
+a,b=5,1
+a+=b
+a-=b
+a*=b
+a/=b
+a//=b
+a**=b
+a%=b
+
+"""
+
+#05
+
+n=float(1)
+n=int(-5)
+n=round(5.499)
+n=round(5.5)
+num=round(123.456,1)#小数点第一位←-1は整数1桁目を四捨五入するということ
+import math
+n=math.ceil(-5.5)#ceiling
+n=math.floor(-5.5)
+d,i=math.modf(5.5)
